@@ -4,7 +4,7 @@
   import Head from 'next/head'
   import { useTina } from 'tinacms/dist/edit-state'
   import { TinaMarkdown } from 'tinacms/dist/rich-text'
-  import client from '../../../.tina/__generated__/client'
+  import client from '../../.tina/__generated__/client'
   
   const BlogPage = (props) => {
     const { data } = useTina({
@@ -31,7 +31,7 @@
               textAlign: 'center',
             }}
           >
-            <h1 className="text-3xl m-8 text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <h1 data-tinafield="title" className="text-3xl m-8 text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               {data.post.title}
             </h1>
             <ContentSection content={data.post.body}></ContentSection>
