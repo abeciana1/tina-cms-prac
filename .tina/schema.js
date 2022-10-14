@@ -138,10 +138,25 @@ const schema = defineSchema({
           label: "SEO Description",
           name: "description"
         },
+        // {
+        //   type: "image",
+        //   label: "Open Graph Image",
+        //   name: "heroImg",
+        // },
         {
-          type: "image",
-          label: "Open Graph Image",
-          name: "heroImg",
+          type: "object",
+          list: true,
+          name: "blocks",
+          label: "Sections",
+          ui: {
+            visualSelector: true,
+          },
+          templates: [
+            heroBlockSchema,
+            featureBlockSchema,
+            contentBlockSchema,
+            testimonialBlockSchema,
+          ],
         },
       ]
     }
