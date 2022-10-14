@@ -46,6 +46,31 @@ const schema = defineSchema({
           name: 'title',
         },
         {
+          type: "image",
+          name: "heroImg",
+          label: "Hero Image",
+        },
+        {
+          type: "rich-text",
+          label: "Excerpt",
+          name: "excerpt",
+        },
+        // {
+        //   type: "reference",
+        //   label: "Author",
+        //   name: "author",
+        //   collections: ["author"],
+        // },
+        // {
+        //   type: "datetime",
+        //   label: "Posted Date",
+        //   name: "date",
+        //   ui: {
+        //     dateFormat: "MMMM DD YYYY",
+        //     timeFormat: "hh:mm A",
+        //   },
+        // },
+        {
           type: 'rich-text',
           label: 'Body',
           name: 'body',
@@ -70,6 +95,22 @@ const schema = defineSchema({
                 },
               ],
             },
+            // {
+            //   name: "BlockQuote",
+            //   label: "Block Quote",
+            //   fields: [
+            //     {
+            //       name: "children",
+            //       label: "Quote",
+            //       type: "rich-text",
+            //     },
+            //     {
+            //       name: "authorName",
+            //       label: "Author",
+            //       type: "string",
+            //     },
+            //   ],
+            // },
           ],
         },
       ],
