@@ -115,6 +115,36 @@ const schema = defineSchema({
         },
       ],
     },
+    {
+      label: "Pages",
+      name: "page",
+      path: "content/pages",
+      ui: {
+        router: ({ document }) => {
+          if (document._sys.filename === "home") {
+            return `/`;
+          }
+          return undefined
+        }
+      },
+      fields: [
+        {
+          type: "string",
+          label: "SEO Title",
+          name: "title"
+        },
+        {
+          type: "string",
+          label: "SEO Description",
+          name: "description"
+        },
+        {
+          type: "image",
+          label: "Open Graph Image",
+          name: "heroImg",
+        },
+      ]
+    }
   ],
 })
 
