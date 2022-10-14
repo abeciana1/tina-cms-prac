@@ -3,19 +3,10 @@ import { client } from "../.tina/__generated__/client";
 
 const DynamicPage = (props) => {
     console.log(props)
-    // const { data } = useTina({
-    //     query: props.query,
-    //     variables: props.variables,
-    //     data: props.data,
-    // })
-    // <Layout rawData={data} data={data.global}>
-    //     <Blocks {...data.page} />
-    // </Layout>
     return (
         <>
-            <h1>hello</h1>
         </>
-    )}
+    )
 }
 
 export default DynamicPage
