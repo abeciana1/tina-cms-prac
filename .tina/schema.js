@@ -14,6 +14,18 @@ const schema = defineSchema({
     token: process.env.NEXT_APP_TINA_READ_ONLY, // generated on app.tina.io,
     clientId: process.env.NEXT_APP_TINA_CLIENT_ID, // generated on app.tina.io
     branch,
+    media: {
+      // If you wanted cloudinary do this
+      // loadCustomStore: async () => {
+      //   const pack = await import("next-tinacms-cloudinary");
+      //   return pack.TinaCloudCloudinaryMediaStore;
+      // },
+      // this is the config for the tina cloud media store
+      tina: {
+        publicFolder: "public",
+        mediaRoot: "uploads",
+      },
+    },
   },
   collections: [
     {
